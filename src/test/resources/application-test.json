@@ -1,9 +1,0 @@
-{
-  "database": {
-    "connectionLimit": 1,
-    "host": "testhost",
-    "user": "test",
-    "pass": "test",
-    "database": "test_data"
-  }
-}
