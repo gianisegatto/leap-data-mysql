@@ -1,5 +1,5 @@
 {
-  "name": "leap-mysql",
+  "name": "leap-data-mysql",
   "version": "0.0.1",
   "description": "I'm here to help you dealing with mysql using a promise way",
   "homepage": "https://github.com/gianisegatto/leap-mysql",
