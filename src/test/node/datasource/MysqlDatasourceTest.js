@@ -1,15 +1,15 @@
 const sinon = require("sinon");
 const expect = require("chai").expect;
 
-const ErrorBuilder = require("leap-core").ErrorBuilder;
-const MysqlDatasource = require("../../../main/node/datasource/MysqlDatasource");
+const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
+const MysqlDatasource = require("../../../main/node/datasource/MySqlDatasource");
 
 describe("MysqlDatasource", () => {
 
     it("should execute success query", async () => {
 
         const connection = {};
-        const sql = "SELECT * FROM table";
+        const sql = "SELECT * FROM test";
         const values = [];
         const rowMapper = {};
 
@@ -79,7 +79,7 @@ describe("MysqlDatasource", () => {
         const values = [];
         const rowMapper = {};
 
-        const expectedException = ErrorBuilder.build("DATABASE_CONNECTION", "Error during open connection", error);
+        const expectedException = SqlErrorBuilder.build("DATABASE_CONNECTION", "Error during open connection", error);
 
         const connectionPool = {
             getConnection(callback) {

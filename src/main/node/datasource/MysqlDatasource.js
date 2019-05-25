@@ -1,10 +1,11 @@
-const ErrorBuilder = require("leap-core").ErrorBuilder;
+const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
+const Datasource = require("leap-data").Datasource;
 
 class MysqlDatasource {
 
-    constructor(mysqlConnectionPool, mysqlQuery) {
-        this.connectionPool = mysqlConnectionPool;
-        this.mysqlQuery = mysqlQuery;
+    constructor(connectionPool, mySqlQuery) {
+        this.connectionPool = connectionPool;
+        this.mySqlQuery = mySqlQuery;
     }
 
     query(sql, values, rowMapper) {
@@ -14,10 +15,10 @@ class MysqlDatasource {
             this.connectionPool.getConnection((err, connection) => {
 
                 if (err) {
-                    return reject(ErrorBuilder.build("DATABASE_CONNECTION", "Error during open connection", err));
+                    return reject(SqlErrorBuilder.build("DATABASE_CONNECTION", "Error during open connection", err));
                 }
 
-                return this.mysqlQuery.query(connection, sql, values, rowMapper)
+                return this.mySqlQuery.query(connection, sql, values, rowMapper)
                     .then(result => resolve(result))
                     .catch(exception => reject(exception))
 

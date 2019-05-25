@@ -1,6 +1,7 @@
 const ErrorBuilder = require("leap-core").ErrorBuilder;
+const SqlQuery = require("leap-data").SqlQuery;
 
-class MysqlQuery {
+class MysqlQuery extends SqlQuery {
 
     query(connection, sql, values, rowMapper) {
 

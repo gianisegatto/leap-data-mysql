@@ -1,6 +1,6 @@
 "use strict";
 
-const MysqlDatasource = require("./datasource/MysqlDatasource");
+const MysqlDatasource = require("./datasource/MySqlDatasource");
 const MysqlConnectionFactory = require("./factory/MysqlConnectionFactory");
 const MysqlDatasourceFactory = require("./factory/MysqlDatasourceFactory");
 
