@@ -2,7 +2,6 @@ const mysql = require("mysql");
 
 const MysqlQuery = require("../datasource/MySqlQuery");
 const MysqlDatasource = require("../datasource/MySqlDatasource");
-const DatasourceFactory = require("leap-data").DatasourceFactory;
 
 class MysqlDatasourceFactory {
 
