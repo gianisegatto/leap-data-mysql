@@ -3,7 +3,7 @@ const mysql = require("mysql");
 const MysqlQuery = require("../datasource/MySqlQuery");
 const MysqlDatasource = require("../datasource/MySqlDatasource");
 
-class MysqlDatasourceFactory {
+class MySqlDatasourceFactory {
 
     constructor(host, user, pass, database, connectionLimit) {
        
@@ -24,4 +24,4 @@ class MysqlDatasourceFactory {
     }
 }
 
-module.exports = MysqlDatasourceFactory;
+module.exports = MySqlDatasourceFactory;
