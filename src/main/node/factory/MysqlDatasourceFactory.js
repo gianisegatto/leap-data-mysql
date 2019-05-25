@@ -4,11 +4,10 @@ const MysqlQuery = require("../datasource/MySqlQuery");
 const MysqlDatasource = require("../datasource/MySqlDatasource");
 const DatasourceFactory = require("leap-data").DatasourceFactory;
 
-class MysqlDatasourceFactory extends DatasourceFactory {
+class MysqlDatasourceFactory {
 
     constructor(host, user, pass, database, connectionLimit) {
-        super();
-
+       
         const configuration = {
             host: host,
             user: user,

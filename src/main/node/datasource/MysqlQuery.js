@@ -1,7 +1,6 @@
-const ErrorBuilder = require("leap-core").ErrorBuilder;
-const SqlQuery = require("leap-data").SqlQuery;
+const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
 
-class MysqlQuery extends SqlQuery {
+class MysqlQuery {
 
     query(connection, sql, values, rowMapper) {
 
@@ -11,7 +10,7 @@ class MysqlQuery extends SqlQuery {
 
                 connection.release();
                 if (error) {
-                    return reject(ErrorBuilder.build("DATABASE_QUERY", "Error during execute query", error));
+                    return reject(SqlErrorBuilder.build("DATABASE_QUERY", "Error during execute query", error));
                 }
 
                 if (rowMapper) {

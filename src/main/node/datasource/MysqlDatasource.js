@@ -1,5 +1,4 @@
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
-const Datasource = require("leap-data").Datasource;
 
 class MysqlDatasource {
 
