@@ -1,4 +1,4 @@
-Welcome to leap mysql!
+Welcome to leap data mysql!
 ===================
 
 * Hi mate. I'm here for helping you to execute operations on Mysql
