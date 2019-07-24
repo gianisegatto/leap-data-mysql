@@ -90,7 +90,7 @@ const rowMapper = (row) => {
 const resultPromise = datasource.query(QUERY, [id], rowMapper);
 
 resultPromise.then(results => console.log(results))
-             .catch(exception => console.log(results));
+             .catch(exception => console.log(exception));
 
 ```
 
