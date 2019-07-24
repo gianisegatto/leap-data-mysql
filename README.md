@@ -41,7 +41,7 @@ const datasource = mysqlDatasourceFactory.create();
 const resultPromise = datasource.query(QUERY);
 
 resultPromise.then(results => console.log(results))
-             .catch(exception => console.log(results));
+             .catch(exception => console.log(exception));
 
 ```
 ### With parameters
@@ -61,7 +61,7 @@ const id = 1;
 const resultPromise = datasource.query(QUERY, [id]);
 
 resultPromise.then(results => console.log(results))
-             .catch(exception => console.log(results));
+             .catch(exception => console.log(exception));
 
 ```
 
