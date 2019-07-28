@@ -5,16 +5,7 @@ const MysqlDatasource = require("../datasource/MySqlDatasource");
 
 class MySqlDatasourceFactory {
 
-    constructor(host, user, pass, database, connectionLimit) {
-       
-        const configuration = {
-            host: host,
-            user: user,
-            pass: pass,
-            connectionLimit: connectionLimit ? connectionLimit : 10,
-            database: database
-        };
-
+    constructor(configuration) {
         this.connectionPool = mysql.createPool(configuration);
         this.mysqlQuery = new MysqlQuery();
     }
