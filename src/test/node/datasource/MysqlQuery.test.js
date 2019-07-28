@@ -1,7 +1,7 @@
 const expect = require("chai").expect;
 const sinon = require("sinon");
 
-const ErrorBuilder = require("leap-core").ErrorBuilder;
+const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
 const MysqlQuery = require("../../../main/node/datasource/MysqlQuery");
 
 describe("MysqlQuery", () => {
@@ -85,7 +85,7 @@ describe("MysqlQuery", () => {
             }
         };
 
-        const expectedException =  ErrorBuilder.build("DATABASE_QUERY", "Error during execute query", error);
+        const expectedException = SqlErrorBuilder.build("DATABASE_QUERY", "Error during execute query", error);
 
         const mockedConnection = sinon.mock(connection);
         mockedConnection.expects("release");

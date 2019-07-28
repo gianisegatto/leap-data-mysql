@@ -19,7 +19,7 @@ describe("MysqlDatasourceFactory", () => {
 
         mockedMysql.expects("createPool").withExactArgs(configuration).returns(connectionPool);
 
-        const mysqlDatasourceFactory = new MysqlDatasourceFactory(host, user, pass, database, connectionLimit);
+        const mysqlDatasourceFactory = new MysqlDatasourceFactory(configuration);
 
         const mysqlDatasource = mysqlDatasourceFactory.create();
 
