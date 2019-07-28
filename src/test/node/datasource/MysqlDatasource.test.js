@@ -2,7 +2,7 @@ const sinon = require("sinon");
 const expect = require("chai").expect;
 
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
-const MysqlDatasource = require("./../../../main/node/datasource/MySqlDatasource");
+const MysqlDatasource = require("../../../main/node/datasource/MySqlDatasource");
 
 describe("MysqlDatasource", () => {
 
