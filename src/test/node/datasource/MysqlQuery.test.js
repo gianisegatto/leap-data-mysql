@@ -4,7 +4,7 @@ const sinon = require("sinon");
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
 const MysqlQuery = require("../../../main/node/datasource/MysqlQuery");
 
-describe("MysqlQuery", () => {
+describe("MySqlQuery", () => {
 
     it("should execute query successful without rowMapper", async () => {
 

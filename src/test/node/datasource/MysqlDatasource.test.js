@@ -4,7 +4,7 @@ const expect = require("chai").expect;
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
 const MysqlDatasource = require("../../../main/node/datasource/MySqlDatasource");
 
-describe("MysqlDatasource", () => {
+describe("MySqlDatasource", () => {
 
     it("should execute success query", async () => {
 
