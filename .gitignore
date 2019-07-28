@@ -13,3 +13,7 @@ dist
 
 .idea
 .idea/vcs.xml
+
+.vscode
+
+.nyc_output
