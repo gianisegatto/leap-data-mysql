@@ -1,6 +1,6 @@
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
 
-class MysqlDatasource {
+class MySqlDatasource {
 
     constructor(connectionPool, mySqlQuery) {
         this.connectionPool = connectionPool;
@@ -26,4 +26,4 @@ class MysqlDatasource {
     }
 }
 
-module.exports = MysqlDatasource;
+module.exports = MySqlDatasource;

@@ -1,6 +1,6 @@
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
 
-class MysqlQuery {
+class MySqlQuery {
 
     query(connection, sql, values, rowMapper) {
 
@@ -24,4 +24,4 @@ class MysqlQuery {
     }
 }
 
-module.exports = MysqlQuery;
+module.exports = MySqlQuery;
