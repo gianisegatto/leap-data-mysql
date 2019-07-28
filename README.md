@@ -1,8 +1,6 @@
 Welcome to leap data mysql!
 ===================
 
-[![Test Coverage][coveralls-image]][coveralls-url]
-
 * Hi mate. I'm here for helping you to execute operations on Mysql
 Given you these kinds of functionality:
  - [connection pool](https://github.com/mysqljs/mysql#pooling-connections)
