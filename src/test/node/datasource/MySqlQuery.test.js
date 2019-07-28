@@ -2,7 +2,7 @@ const expect = require("chai").expect;
 const sinon = require("sinon");
 
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
-const MysqlQuery = require("../../../main/node/datasource/MysqlQuery");
+const MySqlQuery = require("../../../main/node/datasource/MySqlQuery");
 
 describe("MySqlQuery", () => {
 
@@ -24,7 +24,7 @@ describe("MySqlQuery", () => {
         const mockedConnection = sinon.mock(connection);
         mockedConnection.expects("release");
 
-        const mysqlQuery = new MysqlQuery();
+        const mysqlQuery = new MySqlQuery();
 
         const result = await mysqlQuery.query(connection, sql, values);
 
@@ -62,7 +62,7 @@ describe("MySqlQuery", () => {
         const mockedRowMapper = sinon.mock(rowMapper);
         mockedRowMapper.expects("map").withArgs(row).returns(mappedRow);
 
-        const mysqlQuery = new MysqlQuery();
+        const mysqlQuery = new MySqlQuery();
 
         const result = await mysqlQuery.query(connection, sql, values, rowMapper);
 
@@ -90,7 +90,7 @@ describe("MySqlQuery", () => {
         const mockedConnection = sinon.mock(connection);
         mockedConnection.expects("release");
 
-        const mysqlQuery = new MysqlQuery();
+        const mysqlQuery = new MySqlQuery();
 
         try {
             await mysqlQuery.query(connection, sql, values);

@@ -2,7 +2,7 @@ const sinon = require("sinon");
 const expect = require("chai").expect;
 
 const mockedMysql = sinon.mock(require("mysql"));
-const MysqlDatasourceFactory = require("../../../main/node/factory/MysqlDatasourceFactory");
+const MySqlDatasourceFactory = require("../../../main/node/factory/MySqlDatasourceFactory");
 
 describe("MySqlDatasourceFactory", () => {
 
@@ -19,7 +19,7 @@ describe("MySqlDatasourceFactory", () => {
 
         mockedMysql.expects("createPool").withExactArgs(configuration).returns(connectionPool);
 
-        const mysqlDatasourceFactory = new MysqlDatasourceFactory(configuration);
+        const mysqlDatasourceFactory = new MySqlDatasourceFactory(configuration);
 
         const mysqlDatasource = mysqlDatasourceFactory.create();
 

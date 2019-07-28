@@ -2,7 +2,7 @@ const sinon = require("sinon");
 const expect = require("chai").expect;
 
 const SqlErrorBuilder = require("leap-data").SqlErrorBuilder;
-const MysqlDatasource = require("../../../main/node/datasource/MySqlDatasource");
+const MySqlDatasource = require("../../../main/node/datasource/MySqlDatasource");
 
 describe("MySqlDatasource", () => {
 
@@ -30,7 +30,7 @@ describe("MySqlDatasource", () => {
         const mockedMysqlQuery = sinon.mock(mysqlQuery);
         mockedMysqlQuery.expects("query").withExactArgs(connection, sql, values, rowMapper).returns(expectedPromise);
 
-        const mysqlDatasource = new MysqlDatasource(connectionPool, mysqlQuery);
+        const mysqlDatasource = new MySqlDatasource(connectionPool, mysqlQuery);
 
         const result = await mysqlDatasource.query(sql, values, rowMapper);
 
@@ -62,7 +62,7 @@ describe("MySqlDatasource", () => {
         const mockedMysqlQuery = sinon.mock(mysqlQuery);
         mockedMysqlQuery.expects("query").withExactArgs(connection, sql, values, rowMapper).returns(expectedPromise);
 
-        const mysqlDatasource = new MysqlDatasource(connectionPool, mysqlQuery);
+        const mysqlDatasource = new MySqlDatasource(connectionPool, mysqlQuery);
 
         try {
             await mysqlDatasource.query(sql, values, rowMapper);
@@ -87,7 +87,7 @@ describe("MySqlDatasource", () => {
             }
         };
 
-        const mysqlDatasource = new MysqlDatasource(connectionPool);
+        const mysqlDatasource = new MySqlDatasource(connectionPool);
 
         try {
             await mysqlDatasource.query(sql, values, rowMapper);
