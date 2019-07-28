@@ -1,4 +1,4 @@
-Welcome to leap mysql!
+Welcome to leap data mysql!
 ===================
 
 * Hi mate. I'm here for helping you to execute operations on Mysql
@@ -41,7 +41,7 @@ const datasource = mysqlDatasourceFactory.create();
 const resultPromise = datasource.query(QUERY);
 
 resultPromise.then(results => console.log(results))
-             .catch(exception => console.log(results));
+             .catch(exception => console.log(exception));
 
 ```
 ### With parameters
@@ -61,7 +61,7 @@ const id = 1;
 const resultPromise = datasource.query(QUERY, [id]);
 
 resultPromise.then(results => console.log(results))
-             .catch(exception => console.log(results));
+             .catch(exception => console.log(exception));
 
 ```
 
@@ -90,7 +90,7 @@ const rowMapper = (row) => {
 const resultPromise = datasource.query(QUERY, [id], rowMapper);
 
 resultPromise.then(results => console.log(results))
-             .catch(exception => console.log(results));
+             .catch(exception => console.log(exception));
 
 ```
 
