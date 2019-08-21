@@ -2,7 +2,7 @@ const sinon = require("sinon");
 const expect = require("chai").expect;
 
 const mockedMysql = sinon.mock(require("mysql"));
-const MySqlDatasourceFactory = require("./../../../main/node/factory/MySqlDatasourceFactory");
+const MySqlDatasourceFactory = require("../../../main/node/factory/MySqlDatasourceFactory");
 
 describe("MySqlDatasourceFactory", () => {
 
